@@ -5,6 +5,7 @@
 	padding: 0;
 	box-sizing: border-box;
 	font-family: "Poppins", sans-serif;
+	scroll-behavior: smooth;
 }
 
 p {
@@ -69,11 +70,21 @@ header {
 	transition: 0.5s;
 }
 
+header.sticky {
+	background: #fff;
+	padding: 10px 100px;
+	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
 header .logo {
 	color: #fff;
 	font-weight: 700;
 	font-size: 2em;
 	text-decoration: none;
+}
+
+header.sticky .logo {
+	color: #111;
 }
 
 header .logo span {
@@ -94,4 +105,55 @@ header .navigation li a {
 	text-decoration: none;
 	color: #fff;
 	font-weight: 300;
+}
+
+header.sticky .navigation li a {
+	color: #111;
+}
+
+header.sticky li a:hover {
+	color: #ff0157;
+}
+
+section {
+	padding: 100px;
+}
+
+.row {
+	position: relative;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.row .col50 {
+	position: relative;
+	width: 48%;
+}
+
+.titleText {
+	color: #111;
+	font-size: 2em;
+	font-weight: 300;
+}
+
+.titleText span {
+	color: #ff0157;
+	font-weight: 700;
+	font-size: 1.5em;
+}
+
+.row .col50 .imgBx {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.row .col50 .imgBx img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
 }
